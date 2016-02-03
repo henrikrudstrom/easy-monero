@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Window/WindowContainer.qml</file>
+        <file>Window/WindowButtons.qml</file>
+        <file>Window/ResizeHandle.qml</file>
+        <file>Window/FramelessWindowWin8.qml</file>
+        <file>Window/FramelessWindowUnity.qml</file>
+        <file>Window/FramelessWindow.qml</file>
+        <file>Elements/SvgImage.qml</file>
+        <file>Elements/Shadow.qml</file>
+    </qresource>
+</RCC>
