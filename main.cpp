@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     OSCursor cursor;
     engine.rootContext()->setContextProperty("globalCursor", &cursor);
-
+    engine.addImportPath("qrc:/qml-material/modules/");
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

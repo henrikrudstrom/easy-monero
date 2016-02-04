@@ -1,0 +1,3 @@
+[submodule "qml-material"]
+	path = qml-material
+	url = https://github.com/henrikrudstrom/qml-material.git
