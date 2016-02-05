@@ -5,16 +5,23 @@ import QtQuick.Layouts 1.1
 Page {
     View{
         elevation: 2
+        visible: false
         anchors {
             fill: parent
             margins: Units.dp(16)
         }
 
-        SendForm{
-            anchors{
-                fill: parent
-            }
 
-        }
+
+//        SendForm{
+//            anchors{
+//                fill: parent
+//            }
+
+//        }
+    }
+
+    TransactionListView{
+        anchors.fill: parent
     }
 }

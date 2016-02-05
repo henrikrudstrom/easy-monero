@@ -12,5 +12,8 @@
         <file>monero.svg</file>
         <file>MainPage.qml</file>
         <file>SendForm.qml</file>
+        <file>TransactionListView.qml</file>
+        <file>TransactionListItem.qml</file>
+        <file>HashIcon.qml</file>
     </qresource>
 </RCC>

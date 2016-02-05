@@ -28,4 +28,7 @@ include(qml-material/qml-material.pri)
 DISTFILES += \
     MainPageForm.ui.qml \
     MainPage.qml \
-    SendForm.qml
+    SendForm.qml \
+    TransactionListItem.qml \
+    TransactionListView.qml \
+    HashIcon.qml
