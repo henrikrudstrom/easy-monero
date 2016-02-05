@@ -22,14 +22,42 @@ ApplicationWindow{
 
 
 
-    initialPage: TabbedPage {
+
+    initialPage: MainPage{
+        id: page
+        anchors.fill: parent
+
+        actions: [
+            Action {
+                iconName: "action/settings"
+                name: "Settings"
+                hoverAnimation: true
+            }
+        ]
+    }
+
+        /*TabbedPage {
         id: page
         anchors.fill: parent
         title: "MONERO"
-        actionBar {
-            //implicitHeight: Units.gu(2)
+        actionBar.extendedContent: Image {
+                id: image
+                width: Units.gu(1.5)
+                height: Units.gu(1.5)
+                //y: -Units.gu(0.5)
+                //anchors.fill: parent
+                //visible: source != "" && !colorize
 
-        }
+                source: "monero.svg"
+
+                sourceSize {
+                    width: width * Screen.devicePixelRatio
+                    height: height * Screen.devicePixelRatio
+                }
+                z: 10
+            }
+
+
 
         actions: [
             Action {
@@ -42,6 +70,9 @@ ApplicationWindow{
         property string selectedSection: sections[0]
         Sidebar {
             expanded: wideAspect
+            anchors.topMargin: Units.dp(8)
+
+
 
             // Anchoring is automatic
             Flickable {
@@ -73,5 +104,6 @@ ApplicationWindow{
                 }
             }
         }
-    }
+
+    }*/
 }

@@ -24,3 +24,8 @@ QML_IMPORT_PATH =
 # Default rules for deployment.
 include(deployment.pri)
 include(qml-material/qml-material.pri)
+
+DISTFILES += \
+    MainPageForm.ui.qml \
+    MainPage.qml \
+    SendForm.qml
