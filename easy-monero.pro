@@ -10,7 +10,8 @@ HEADERS += \
 
 
 SOURCES += main.cpp \
-    oscursor.cpp
+        oscursor.cpp \
+
 
 lupdate_only {
 SOURCES = *.qml \
@@ -19,16 +20,13 @@ SOURCES = *.qml \
 }
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+QML_IMPORT_PATH = qrc:/qml-material/modules
 
 # Default rules for deployment.
 include(deployment.pri)
 include(qml-material/qml-material.pri)
 
-DISTFILES += \
-    MainPageForm.ui.qml \
-    MainPage.qml \
-    SendForm.qml \
-    TransactionListItem.qml \
-    TransactionListView.qml \
-    HashIcon.qml
+DISTFILES += *.qml \
+        Window/*.qml \
+        Elements/*.qml
+
