@@ -28,5 +28,6 @@ include(qml-material/qml-material.pri)
 
 DISTFILES += *.qml \
         Window/*.qml \
-        Elements/*.qml
+        Elements/*.qml \
+    Icons.qml
 

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.4
 
 Item {
 
@@ -19,8 +19,8 @@ Item {
         var tx = {
             "id": randomBytes(64),
             "address": randomBytes(64),
-            "datetime": Date.now(),
-            "amount": Math.random(0,100)
+            "date": Date.now() - Math.pow(Math.random() * 100, 2),
+            "amount": Math.pow(Math.random() * 100, 2)
             }
         console.log("get tx")
         console.log(tx)

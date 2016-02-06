@@ -1,24 +1,19 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import QtGraphicalEffects 1.0
 import Material 0.2
 Item{
     property int size: Units.gu(1)
     property alias hash: canvas.hash
+    property alias resolution: canvas.resolution
+    width: size
+    height: size
+
     Canvas {
         id: canvas
-        width: size
-        height: size
-        anchors.centerIn: parent
+
         property string hash
         property int resolution: 5
-
-        property color strokeStyle:  Qt.darker(fillStyle, 1.4)
-        property color fillStyle: "#b40000" // red
-        //property int lineWidth: lineWidthCtrl.value
-        property bool fill: true
-        property bool stroke: true
-        property real alpha: 1.0
-
+        anchors.fill: parent
         antialiasing: true
         visible: false
         property var grid: []
@@ -28,7 +23,7 @@ Item{
             var l = resolution * resolution
             var size = Math.floor(hash.length / l)
             var max = Math.pow(16, size);
-            console.log("L: " + l, size, max)
+            //console.log("L: " + l, size, max)
             var maxIndex = -1
             var maxVal = -1
             for(var i = 0; i < l; i += 1){
@@ -39,9 +34,9 @@ Item{
                     maxIndex = i
                 }
 
-                console.log()
+                //console.log()
                 var include = val > (2 * max / 5.0) ? val > (4 * max / 5.0) ? 1 : 1 : 0
-                console.log(str, val, (max / 2.0), include)
+                //console.log(str, val, (max / 2.0), include)
                 grid.push(include)
 
             }
@@ -61,12 +56,12 @@ Item{
             ctx.strokeStyle = canvas.strokeStyle;
             ctx.fillStyle = canvas.fillStyle;
             var size = 1.0 * canvas.width / canvas.resolution
-            console.log(size, canvas.width, canvas.resolution)
+            //console.log(size, canvas.width, canvas.resolution)
             for(var i = 0; i < canvas.resolution * canvas.resolution; i++){
                 //ctx.fillStyle =
                 var x = Math.round((i % canvas.resolution) * size)
                 var y = Math.round(Math.floor(i / canvas.resolution) * size)
-                console.log(ctx.fillStyle)
+                //console.log(ctx.fillStyle)
 
 
                 drawRect(ctx, x,y,Math.round(size), colors[canvas.grid[i]])
@@ -91,7 +86,7 @@ Item{
     Rectangle{
         id: maskRect
         color: "black"
-        anchors.fill: canvas
+        anchors.fill: parent
         radius: 0.5 * size / 5
         visible: false
     }
@@ -99,7 +94,7 @@ Item{
 
     OpacityMask{
         id: mask
-        anchors.fill: canvas
+        anchors.fill: parent
         source: canvas
         maskSource: maskRect
 

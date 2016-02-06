@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Material 0.1
 import Material.ListItems 0.1 as ListItem
 import QtQuick.Controls 1.3 as QuickControls
@@ -32,6 +32,7 @@ View {
         }
 
         ListItem.Standard {
+
             action: Icon {
                 anchors.centerIn: parent
                 name: "action/account_circle"
