@@ -28,5 +28,14 @@ Item {
     Scrollbar {
         flickableItem: listView
     }
+    ActionButton {
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+            margins: Units.dp(32)
+        }
+
+        iconName: "content/add"
+    }
 
 }

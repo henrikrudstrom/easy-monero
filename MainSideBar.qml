@@ -10,7 +10,6 @@ Sidebar {
 
     Column {
         width: parent.width
-
         ListItem.Subtitled {
             text: "Wallet"
             subText: "2331.22 XMR"
@@ -24,6 +23,7 @@ Sidebar {
         ListItem.Divider{
 
         }
+
         SidebarItem{
             text: "Overview"
             iconName: "action/view_module"
@@ -53,7 +53,7 @@ Sidebar {
         }
         SidebarItem{
             text: "Contacts"
-            iconName: "social/groups"
+            iconName: "social/group"
         }
         SidebarItem{
             text: "Favorites"
@@ -66,6 +66,7 @@ Sidebar {
         ListItem.Divider{
 
         }
+
         ListItem.Subtitled {
             text: "Miner"
             subText: "Mining at 5.22GH/s"
@@ -73,6 +74,19 @@ Sidebar {
             action: Icon {
                 anchors.centerIn: parent
                 name: "device/brightness_high"
+                size: Units.dp(32)
+            }
+        }
+        ListItem.Divider{
+
+        }
+        ListItem.Subtitled {
+            text: "Network"
+            subText: "Connected to 27 peers"
+            itemLabel.style: "dialog"
+            action: Icon {
+                anchors.centerIn: parent
+                name: "hardware/device_hub"
                 size: Units.dp(32)
             }
         }
