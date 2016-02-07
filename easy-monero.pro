@@ -24,8 +24,8 @@ QML_IMPORT_PATH = $$PWD/qml-material/modules #qml-material/modules
 
 # Default rules for deployment.
 include(deployment.pri)
-include(vendor/qml-material/qml-material.pri)
-
+include(vendor/lib/qml-material/qml-material.pri)
+include(vendor/lib/quickflux/quickflux.pri)
 DISTFILES += *.qml \
         Window/*.qml \
         Elements/*.qml \
