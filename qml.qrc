@@ -16,5 +16,7 @@
         <file>TransactionListItem.qml</file>
         <file>HashIcon.qml</file>
         <file>TransactionStore.qml</file>
+        <file>SidebarItem.qml</file>
+        <file>MainSideBar.qml</file>
     </qresource>
 </RCC>

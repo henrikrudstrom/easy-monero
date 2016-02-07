@@ -8,26 +8,25 @@ Item {
     TransactionStore{
         id: store
     }
-//    Rectangle{
-//    color: "orange"
-//    anchors.fill: parent
-//    }
-    Component.onCompleted: {
-        console.log("Done")
-        store
-    }
-
     ListView{
-        anchors.fill: parent
-        anchors.topMargin: Units.dp(8)
+        id: listView
+        anchors {
+            fill: parent
+            topMargin: Units.dp(16)
+        }
+
         model: store.model
         spacing: Units.dp(8)
         delegate: TransactionListItem {
-            width: list.width
+            width: parent.width - Units.dp(24)
+            anchors.horizontalCenter: parent.horizontalCenter
         }
         section{
 
         }
+    }
+    Scrollbar {
+        flickableItem: listView
     }
 
 }

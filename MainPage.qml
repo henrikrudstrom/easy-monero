@@ -3,42 +3,58 @@ import Material 0.2
 import Material.ListItems 0.1 as ListItem
 import QtQuick.Layouts 1.1
 Page {
-    View{
-        elevation: 2
-        visible: false
-        anchors {
-            fill: parent
-            margins: Units.dp(16)
+    id: page
+
+    actionBar.customContent: Item {
+        anchors.fill: parent
+
+        Label{
+            text: "MONERO"
+            style: "title"
+            color: Theme.dark.textColor
+            anchors.verticalCenter: parent.verticalCenter
         }
 
 
+        Item{
+            anchors{
+                fill: parent
+                leftMargin: sidebar.width
+                rightMargin: Units.dp(8)
+                topMargin: Units.dp(8)
+                bottomMargin: Units.dp(8)
+            }
+            TextField {
+                id: searchField
+                anchors{
 
+                    centerIn: parent
+
+                }
+                width: parent.width - Units.dp(16)
+
+                text: "search"
+                color: Palette.colors["grey"]["200"]
+                textColor: Palette.colors["grey"]["200"]
+            }
+            Icon {
+                id: icon
+                anchors{
+                    verticalCenter: parent.verticalCenter
+                    right: searchField.right
+                    leftMargin: Units.dp(16)
+                }
+                name: "action/search"
+                size: Units.dp(24)
+                color: "white"
+
+            }
+
+        }
     }
 
-//    ListModel{
-//        id: navigationModel
-
-//    }
-    property var components: ["Home", "Send Monero", "History", "Contact"]
-    property string selectedComponent: components[0]
-    Sidebar {
-
+    MainSideBar {
         id: sidebar
-
-        //expanded: !navDrawer.enabled
-
-        Column {
-            width: parent.width
-
-            Repeater {
-                model: page.components
-                delegate: ListItem.Standard {
-                    text: modelData
-                    selected: modelData == page.selectedComponent
-                    onClicked: selectedComponent = modelData
-                }
-            }
-        }
     }
 
     Flickable {
@@ -59,7 +75,7 @@ Page {
             // selectedComponent will always be valid, as it defaults to the first component
             source: {
 
-                return Qt.resolvedUrl("TransactionListView.qml").arg(selectedComponent.replace(" ", ""))
+                return Qt.resolvedUrl("TransactionListView.qml")
 
             }
         }
@@ -72,7 +88,4 @@ Page {
     Scrollbar {
         flickableItem: flickable
     }
-//    TransactionListView{
-//        anchors.fill: parent
-//    }
 }

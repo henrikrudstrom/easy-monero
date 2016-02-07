@@ -16,40 +16,39 @@ View {
             size: Units.gu(0.75)
 
             hash: address
-            //anchors.verticalCenter: parent.verticalCenter
-
         }
-//        Icon {
-//            Layout.alignment: Qt.AlignVCenter
-//            source: Qt.resolvedUrl("Material/icons/navigation/arrow_forward.svg")
-//            color: Theme.light.iconColor
-//        }
+
+        Item{
+            Layout.preferredWidth: Units.dp(32)
+        }
+
         Label {
             Layout.alignment: Qt.AlignVCenter
-            Layout.preferredWidth: Units.gu(8)
             text: Math.round(amount * 100) / 100 + " XMR"
+            style: "subheading"
 
         }
 
         Label {
             Layout.alignment: Qt.AlignVCenter
-            Layout.preferredWidth: Units.gu(8)
-            text: "From: " + address.slice(0,16)+"..."
+            text: "recieved from "
+            style: "subheading"
+        }
+        Label {
+            Layout.alignment: Qt.AlignVCenter
+            text: address.slice(0,32)
+            style: "subheading"
+            Layout.fillWidth: true
+
         }
 
         Label {
             Layout.alignment: Qt.AlignVCenter
+            style: "subheading"
             text: {
-                console.log(date)
-
                 return Dateutils.friendlyTime(date)
             }
         }
-
-//        Label {
-//            //Layout.alignment: Qt.AlignRight
-//            text: date
-//        }
     }
 
 }

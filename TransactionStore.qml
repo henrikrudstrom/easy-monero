@@ -4,26 +4,20 @@ Item {
 
     property ListModel model: ListModel {
         Component.onCompleted: {
-            console.log("hello")
-            var tx = randomTransaction()
-            append(randomTransaction())
-            append(randomTransaction())
-            append(randomTransaction())
-            console.log(count)
+            for(var i = 0; i < 100; i++){
+                append(randomTransaction())
+            }
         }
 
     }
 
     function randomTransaction(){
-        console.log("TX")
         var tx = {
             "id": randomBytes(64),
             "address": randomBytes(64),
-            "date": Date.now() - Math.pow(Math.random() * 100, 2),
+            "date": Date.now() - Math.pow(Math.random() * 10000, 2),
             "amount": Math.pow(Math.random() * 100, 2)
             }
-        console.log("get tx")
-        console.log(tx)
         return tx
 
     }
