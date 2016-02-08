@@ -1,6 +1,6 @@
-[submodule "qml-material"]
-	path = qml-material
-	url = https://github.com/henrikrudstrom/qml-material.git
+[submodule "vendor/lib/quickflux"]
+	path = vendor/lib/quickflux
+	url = https://github.com/benlau/quickflux.git
 [submodule "vendor/lib/qml-material"]
 	path = vendor/lib/qml-material
 	url = https://github.com/henrikrudstrom/qml-material.git
