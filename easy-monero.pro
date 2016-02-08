@@ -20,7 +20,8 @@ SOURCES = *.qml \
 }
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH = $$PWD/qml-material/modules #qml-material/modules
+QML_IMPORT_PATH = $$PWD/vendor/lib/qml-material/modules #qml-material/modules
+
 
 # Default rules for deployment.
 include(deployment.pri)

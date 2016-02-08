@@ -9,12 +9,12 @@ Page {
         anchors.fill: parent
 
         Label{
+            id: title
             text: "MONERO"
             style: "title"
             color: Theme.dark.textColor
             anchors.verticalCenter: parent.verticalCenter
         }
-
 
         Item{
             anchors{
@@ -28,21 +28,22 @@ Page {
                 id: searchField
                 anchors{
 
-                    centerIn: parent
-
+                    left: parent.left
+                    right: icon.left
+                    leftMargin: Units.dp(16)
+                    rightMargin: Units.dp(4)
                 }
-                width: parent.width - Units.dp(16)
 
                 text: "search"
-                color: Palette.colors["grey"]["200"]
-                textColor: Palette.colors["grey"]["200"]
+                color: Palette.colors["grey"]["400"]
+                textColor: Palette.colors["grey"]["400"]
             }
             Icon {
                 id: icon
                 anchors{
                     verticalCenter: parent.verticalCenter
-                    right: searchField.right
-                    leftMargin: Units.dp(16)
+                    right: parent.right
+                    rightMargin: Units.dp(16)
                 }
                 name: "action/search"
                 size: Units.dp(24)

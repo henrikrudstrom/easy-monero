@@ -47,6 +47,7 @@ Item{
 
         property var colors: ["#B40", "#9CA", "#682"]
 
+        //TODO: implement conways game of life.
         onPaint: {
             var ctx = canvas.getContext('2d');
             ctx.save();

@@ -10,8 +10,8 @@ ApplicationWindow{
     minimumWidth: 750
     minimumHeight: 250
     visible: true
-    height: 400
-    width: 900
+    height: 800
+    width: 1000
     theme {
         primaryColor: Palette.colors["grey"]["900"]
         accentColor:Palette.colors["orange"]["800"]
