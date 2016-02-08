@@ -17,6 +17,7 @@ Page {
         }
 
         Item{
+            visible: true
             anchors{
                 fill: parent
                 leftMargin: sidebar.width

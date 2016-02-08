@@ -16,7 +16,9 @@ SOURCES += main.cpp \
 lupdate_only {
 SOURCES = *.qml \
         Window/*.qml \
-        Elements/*.qml
+        Elements/*.qml \
+        Actions/*.qml \
+        Stores/*.qml
 }
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
@@ -32,5 +34,9 @@ DISTFILES += *.qml \
         Elements/*.qml \
     Icons.qml \
     SidebarItem.qml \
-    MainSideBar.qml
+    MainSideBar.qml \
+    ViewActions.qml \
+    Actions/ViewActionTypes.qml \
+    Stores/qmldir \
+    Actions/qmldir
 

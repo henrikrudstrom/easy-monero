@@ -7,16 +7,18 @@
         <file>Window/FramelessWindowWin8.qml</file>
         <file>Window/FramelessWindowUnity.qml</file>
         <file>Window/FramelessWindow.qml</file>
-        <file>Elements/SvgImage.qml</file>
-        <file>Elements/Shadow.qml</file>
         <file>monero.svg</file>
         <file>MainPage.qml</file>
         <file>SendForm.qml</file>
         <file>TransactionListView.qml</file>
         <file>TransactionListItem.qml</file>
         <file>HashIcon.qml</file>
-        <file>TransactionStore.qml</file>
         <file>SidebarItem.qml</file>
         <file>MainSideBar.qml</file>
+        <file>Actions/ViewActionTypes.qml</file>
+        <file>Actions/ViewActions.qml</file>
+        <file>Actions/qmldir</file>
+        <file>Stores/qmldir</file>
+        <file>Stores/TransactionStore.qml</file>
     </qresource>
 </RCC>

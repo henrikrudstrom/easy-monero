@@ -2,6 +2,8 @@ import QtQuick 2.4
 import Material 0.2
 import Material.ListItems 0.1 as ListItem
 import QtQuick.Layouts 1.1
+import "Actions"
+
 Sidebar {
 
     id: sidebar
@@ -27,25 +29,29 @@ Sidebar {
         SidebarItem{
             text: "Overview"
             iconName: "action/view_module"
+            onClicked: ViewActions.openView("", {})
         }
         SidebarItem{
             text: "Incoming"
             iconName: "content/inbox"
-
+            onClicked: ViewActions.openView("recieved", {})
         }
         SidebarItem{
             text: "Outgoing"
             iconName: "content/inbox"
+            onClicked: ViewActions.openView("sent", {})
 
         }
         SidebarItem{
             text: "Unconfirmed"
             iconName: "content/flag"
+            onClicked: ViewActions.openView("uncofirmed", {})
 
         }
         SidebarItem{
             text: "Drafts"
             iconName: "content/drafts"
+            onClicked: ViewActions.openView("draft", {})
 
         }
         ListItem.Divider{

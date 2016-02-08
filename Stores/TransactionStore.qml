@@ -1,5 +1,6 @@
+pragma Singleton
 import QtQuick 2.4
-
+import QuickFlux 1.0
 Item {
 
     property ListModel model: ListModel {
@@ -7,14 +8,14 @@ Item {
             randomIds(24)
             var date = Date.now()
             for(var i = 0; i < 100; i++){
-                //console.log(date)
                 var tx = randomTransaction(date)
                 date = tx.date
-
                 append(tx)
             }
         }
     }
+
+
 
     property ListModel drafts: ListModel{
 
@@ -47,8 +48,8 @@ Item {
             "id": randomBytes(64),
             "address": ids[idi],
             "date": date,
-            "direction": Math.random() > 0.25 ? "send" : "recieve",
-            "draft": Math.random() > 0.95,
+            "direction": Math.random() > 0.5 ? 0 : 1,
+            "draft": Math.random() > 0.90,
             "confirmations": (Date.now() - date) / (1000 * 60 * 3),
             "amount": Math.pow(Math.random() * 100, 2)
             }
