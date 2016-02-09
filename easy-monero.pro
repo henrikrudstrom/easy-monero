@@ -28,6 +28,7 @@ QML_IMPORT_PATH = $$PWD/vendor/lib/qml-material/modules #qml-material/modules
 
 # Default rules for deployment.
 include(deployment.pri)
+
 include(vendor/lib/qml-material/qml-material.pri)
 include(vendor/lib/quickflux/quickflux.pri)
 include(vendor/lib/gel/com_cutehacks_gel.pri)
