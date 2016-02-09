@@ -7,6 +7,7 @@ import Material.ListItems 0.1 as ListItem
 import "Window"
 
 ApplicationWindow{
+    id: root
     minimumWidth: 750
     minimumHeight: 250
     visible: true
@@ -20,7 +21,9 @@ ApplicationWindow{
 
     initialPage: MainPage{
         id: page
-        anchors.fill: parent
+        anchors {
+            fill: parent
+        }
 
         actions: [
             Action {

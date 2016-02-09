@@ -21,5 +21,6 @@
         <file>Stores/qmldir</file>
         <file>Stores/TransactionStore.qml</file>
         <file>Views/TransactionView.qml</file>
+        <file>BaseView.qml</file>
     </qresource>
 </RCC>

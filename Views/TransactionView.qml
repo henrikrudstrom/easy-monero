@@ -11,27 +11,29 @@ import QuickFlux 1.0
 import com.cutehacks.gel 1.0
 Item {
     id: view
-    property string modelGroup: visualModel.filterOnGroup
-    //property alias
+    property alias filter: collection.filter
+    property alias comparator: collection.comparator
+    property alias descendingSort: collection.descendingSort
+    property alias delegate: visualModel.delegate
 
     Collection{
         id: collection
         model: TransactionStore.model
-        //comparator: "date"
+        comparator: "date"
+
         filter: function(item) {
-            console.log("filter", item.amount)
-            return item.amount < 100
+            //console.log(item.date)
+            return true
         }
     }
 
     DelegateModel {
         id: visualModel
-        model: collection.model
+        model: collection
 
         delegate: TransactionListItem {
             width: parent.width - Units.dp(24)
             anchors.horizontalCenter: parent.horizontalCenter
-
         }
     }
 

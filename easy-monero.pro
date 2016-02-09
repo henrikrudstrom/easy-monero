@@ -44,5 +44,6 @@ DISTFILES += *.qml \
     Actions/ViewActionTypes.qml \
     Stores/qmldir \
     Actions/qmldir \
-    Views/TransactionView.qml
+    Views/TransactionView.qml \
+    BaseView.qml
 

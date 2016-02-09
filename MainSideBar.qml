@@ -4,8 +4,8 @@ import Material.ListItems 0.1 as ListItem
 import QtQuick.Layouts 1.1
 import "Actions"
 
-Sidebar {
-
+NavigationDrawer {
+    enabled: true
     id: sidebar
 
     //expanded: !navDrawer.enabled
@@ -29,7 +29,7 @@ Sidebar {
         SidebarItem{
             text: "Overview"
             iconName: "action/view_module"
-            onClicked: ViewActions.openView("", {})
+            onClicked: ViewActions.openView("all", {})
         }
         SidebarItem{
             text: "Incoming"
@@ -45,7 +45,7 @@ Sidebar {
         SidebarItem{
             text: "Unconfirmed"
             iconName: "content/flag"
-            onClicked: ViewActions.openView("uncofirmed", {})
+            onClicked: ViewActions.openView("unconfirmed", {})
 
         }
         SidebarItem{
