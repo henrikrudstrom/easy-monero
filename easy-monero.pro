@@ -18,7 +18,8 @@ SOURCES = *.qml \
         Window/*.qml \
         Elements/*.qml \
         Actions/*.qml \
-        Stores/*.qml
+        Stores/*.qml \
+        Views/*.qml
 }
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
@@ -29,6 +30,10 @@ QML_IMPORT_PATH = $$PWD/vendor/lib/qml-material/modules #qml-material/modules
 include(deployment.pri)
 include(vendor/lib/qml-material/qml-material.pri)
 include(vendor/lib/quickflux/quickflux.pri)
+include(vendor/lib/gel/com_cutehacks_gel.pri)
+INCLUDEPATH += vendor/lib/gel/
+
+
 DISTFILES += *.qml \
         Window/*.qml \
         Elements/*.qml \
@@ -38,5 +43,6 @@ DISTFILES += *.qml \
     ViewActions.qml \
     Actions/ViewActionTypes.qml \
     Stores/qmldir \
-    Actions/qmldir
+    Actions/qmldir \
+    Views/TransactionView.qml
 

@@ -20,5 +20,6 @@
         <file>Actions/qmldir</file>
         <file>Stores/qmldir</file>
         <file>Stores/TransactionStore.qml</file>
+        <file>Views/TransactionView.qml</file>
     </qresource>
 </RCC>

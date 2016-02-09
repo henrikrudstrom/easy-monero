@@ -1,34 +1,24 @@
 pragma Singleton
 import QtQuick 2.4
 import QuickFlux 1.0
+import com.cutehacks.gel 1.0
 Item {
 
-    property ListModel model: ListModel {
+    property JsonListModel model: JsonListModel {
         Component.onCompleted: {
             randomIds(24)
             var date = Date.now()
             for(var i = 0; i < 100; i++){
                 var tx = randomTransaction(date)
                 date = tx.date
-                append(tx)
+                add(tx)
             }
         }
     }
 
 
 
-    property ListModel drafts: ListModel{
 
-    }
-    property ListModel sent: ListModel{
-
-    }
-    property ListModel recieved: ListModel{
-
-    }
-    property ListModel unconfirmed: ListModel{
-
-    }
 
     property var ids: []
 
